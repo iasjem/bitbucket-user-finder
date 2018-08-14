@@ -1,24 +1,159 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainVC" customModule="Bitbucket_User_Finder" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ig-mq-KWP">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" red="0.058823529409999999" green="0.40784313729999999" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Bitbucket User Finder" id="zXy-LY-Kto">
+                                        <barButtonItem key="rightBarButtonItem" systemItem="search" id="rKg-u3-Gid">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <segue destination="mRn-6G-V1e" kind="presentation" identifier="searchSegue" modalPresentationStyle="overCurrentContext" id="jUJ-5J-W7z"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="VHF-DH-enx" userLabel="LoadingDataView">
+                                <rect key="frame" x="137" y="305" width="99.5" height="57.5"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="kf4-Vm-YeJ">
+                                        <rect key="frame" x="31.5" y="0.0" width="37" height="37"/>
+                                        <color key="color" red="0.058823529409999999" green="0.40784313729999999" blue="0.70588235290000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgB-gD-Je3">
+                                        <rect key="frame" x="0.0" y="37" width="99.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="O6c-Kj-X6F" userLabel="UserDataView">
+                                <rect key="frame" x="62" y="243" width="250" height="180.5"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="29d-GF-CIA">
+                                        <rect key="frame" x="75" y="0.0" width="100" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Xb1-xH-A9t"/>
+                                            <constraint firstAttribute="height" constant="100" id="yz2-cm-vBM"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <integer key="value" value="50"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="username" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Web-jw-jt6">
+                                        <rect key="frame" x="0.0" y="115" width="250" height="20.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="RbS-N1-Nu4"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aeG-sl-fYP">
+                                        <rect key="frame" x="0.0" y="150.5" width="250" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="SVJ-TV-5zb"/>
+                                        </constraints>
+                                        <state key="normal" title="@username"/>
+                                        <connections>
+                                            <action selector="usernameLinkButtonWasPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xCe-XA-8Jh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="PE0-r9-qnW"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="VHF-DH-enx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1xd-Ww-f1Q"/>
+                            <constraint firstItem="7ig-mq-KWP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Onj-oe-pa5"/>
+                            <constraint firstItem="7ig-mq-KWP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="YDC-S2-Ihl"/>
+                            <constraint firstItem="VHF-DH-enx" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="fiF-Fl-u7L"/>
+                            <constraint firstItem="7ig-mq-KWP" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="gPh-WT-FoH"/>
+                            <constraint firstItem="O6c-Kj-X6F" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="lV8-Xw-ACs"/>
+                            <constraint firstItem="O6c-Kj-X6F" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vJn-5Y-SvQ"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="connectionStatusLabel" destination="RgB-gD-Je3" id="ccG-xn-lkZ"/>
+                        <outlet property="displayNameLabel" destination="Web-jw-jt6" id="UAj-BA-0IT"/>
+                        <outlet property="loadingDataView" destination="VHF-DH-enx" id="7vA-om-odQ"/>
+                        <outlet property="spinner" destination="kf4-Vm-YeJ" id="QyT-Ns-QNu"/>
+                        <outlet property="userAvatar" destination="29d-GF-CIA" id="Blh-Gh-p8S"/>
+                        <outlet property="userDataView" destination="O6c-Kj-X6F" id="XDW-WB-xPL"/>
+                        <outlet property="usernameLinkButton" destination="aeG-sl-fYP" id="gB3-aT-x3A"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="194" y="114"/>
+        </scene>
+        <!--SearchVC-->
+        <scene sceneID="0rV-56-TnF">
+            <objects>
+                <viewController id="mRn-6G-V1e" customClass="SearchVC" customModule="Bitbucket_User_Finder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xtY-Ov-20V">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="RkA-0N-vwW">
+                                <rect key="frame" x="0.0" y="20" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="0.88430447048611116" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="RkA-0N-vwW" firstAttribute="leading" secondItem="gDJ-g8-AUE" secondAttribute="leading" id="8aC-yx-rEQ"/>
+                            <constraint firstItem="RkA-0N-vwW" firstAttribute="trailing" secondItem="gDJ-g8-AUE" secondAttribute="trailing" id="XNv-Ex-J08"/>
+                            <constraint firstItem="RkA-0N-vwW" firstAttribute="top" secondItem="gDJ-g8-AUE" secondAttribute="top" id="dXv-xF-uBf"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="gDJ-g8-AUE"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="VPZ-o9-7kH" appends="YES" id="vZi-I8-ip6"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="RkA-0N-vwW" id="bjO-is-hCE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dri-w3-UqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="VPZ-o9-7kH">
+                    <connections>
+                        <action selector="dismissModalView" destination="mRn-6G-V1e" id="Qlm-cK-eFC"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="990" y="114"/>
         </scene>
     </scenes>
 </document>

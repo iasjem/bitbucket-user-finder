@@ -1,0 +1,6 @@
+framework module Pods_Bitbucket_User_Finder {
+  umbrella header "Pods-Bitbucket User Finder-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -7,21 +7,41 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		761C9397212174470046F1A5 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C9396212174470046F1A5 /* Constants.swift */; };
+		761C939921219F2B0046F1A5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761C939821219F2B0046F1A5 /* User.swift */; };
 		762C41232121687B00799500 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762C41222121687B00799500 /* AppDelegate.swift */; };
-		762C41252121687B00799500 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762C41242121687B00799500 /* ViewController.swift */; };
+		762C41252121687B00799500 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762C41242121687B00799500 /* MainVC.swift */; };
 		762C41282121687B00799500 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 762C41262121687B00799500 /* Main.storyboard */; };
 		762C412A2121687B00799500 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 762C41292121687B00799500 /* Assets.xcassets */; };
 		762C412D2121687B00799500 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 762C412B2121687B00799500 /* LaunchScreen.storyboard */; };
+		762C413821216D6E00799500 /* SearchVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762C413721216D6E00799500 /* SearchVC.swift */; };
+		762C413F21216FDE00799500 /* UserDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762C413E21216FDE00799500 /* UserDisplay.swift */; };
+		762C4144212170F200799500 /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 762C4143212170F200799500 /* UserService.swift */; };
+		76CE46CF2122BFE500C65F40 /* Link.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CE46CE2122BFE500C65F40 /* Link.swift */; };
+		76CE46D12122C05E00C65F40 /* Avatar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CE46D02122C05E00C65F40 /* Avatar.swift */; };
+		76CE46D32122C06900C65F40 /* Html.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CE46D22122C06900C65F40 /* Html.swift */; };
+		FB73C5D1C5B7CD9DA0DCC746 /* Pods_Bitbucket_User_Finder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2664D43B915F9E6882E35A2C /* Pods_Bitbucket_User_Finder.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		17F70AA62C73D8E71E3087B5 /* Pods-Bitbucket User Finder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitbucket User Finder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bitbucket User Finder/Pods-Bitbucket User Finder.debug.xcconfig"; sourceTree = "<group>"; };
+		21104B39656E5337E90C20F1 /* Pods-Bitbucket User Finder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bitbucket User Finder.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bitbucket User Finder/Pods-Bitbucket User Finder.release.xcconfig"; sourceTree = "<group>"; };
+		2664D43B915F9E6882E35A2C /* Pods_Bitbucket_User_Finder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bitbucket_User_Finder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		761C9396212174470046F1A5 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		761C939821219F2B0046F1A5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		762C411F2121687B00799500 /* Bitbucket User Finder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bitbucket User Finder.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		762C41222121687B00799500 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		762C41242121687B00799500 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		762C41242121687B00799500 /* MainVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		762C41272121687B00799500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		762C41292121687B00799500 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		762C412C2121687B00799500 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		762C412E2121687B00799500 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		762C413721216D6E00799500 /* SearchVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchVC.swift; sourceTree = "<group>"; };
+		762C413E21216FDE00799500 /* UserDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDisplay.swift; sourceTree = "<group>"; };
+		762C4143212170F200799500 /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		76CE46CE2122BFE500C65F40 /* Link.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Link.swift; sourceTree = "<group>"; };
+		76CE46D02122C05E00C65F40 /* Avatar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Avatar.swift; sourceTree = "<group>"; };
+		76CE46D22122C06900C65F40 /* Html.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Html.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +49,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB73C5D1C5B7CD9DA0DCC746 /* Pods_Bitbucket_User_Finder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CE4F373917FA7DE9BE3A687 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2664D43B915F9E6882E35A2C /* Pods_Bitbucket_User_Finder.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		761C9395212174330046F1A5 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				761C9396212174470046F1A5 /* Constants.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
 		762C41162121687B00799500 = {
 			isa = PBXGroup;
 			children = (
 				762C41212121687B00799500 /* Bitbucket User Finder */,
 				762C41202121687B00799500 /* Products */,
+				A586F19DF88172D7862D9908 /* Pods */,
+				4CE4F373917FA7DE9BE3A687 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +93,55 @@
 		762C41212121687B00799500 /* Bitbucket User Finder */ = {
 			isa = PBXGroup;
 			children = (
+				761C9395212174330046F1A5 /* Utility */,
+				762C413D21216FCE00799500 /* Service */,
+				762C413C21216FC800799500 /* Model */,
+				762C413421216D4B00799500 /* Controller */,
 				762C41222121687B00799500 /* AppDelegate.swift */,
-				762C41242121687B00799500 /* ViewController.swift */,
 				762C41262121687B00799500 /* Main.storyboard */,
 				762C41292121687B00799500 /* Assets.xcassets */,
 				762C412B2121687B00799500 /* LaunchScreen.storyboard */,
 				762C412E2121687B00799500 /* Info.plist */,
 			);
 			path = "Bitbucket User Finder";
+			sourceTree = "<group>";
+		};
+		762C413421216D4B00799500 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				762C41242121687B00799500 /* MainVC.swift */,
+				762C413721216D6E00799500 /* SearchVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		762C413C21216FC800799500 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				762C413E21216FDE00799500 /* UserDisplay.swift */,
+				761C939821219F2B0046F1A5 /* User.swift */,
+				76CE46CE2122BFE500C65F40 /* Link.swift */,
+				76CE46D02122C05E00C65F40 /* Avatar.swift */,
+				76CE46D22122C06900C65F40 /* Html.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		762C413D21216FCE00799500 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				762C4143212170F200799500 /* UserService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		A586F19DF88172D7862D9908 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				17F70AA62C73D8E71E3087B5 /* Pods-Bitbucket User Finder.debug.xcconfig */,
+				21104B39656E5337E90C20F1 /* Pods-Bitbucket User Finder.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +151,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 762C41312121687B00799500 /* Build configuration list for PBXNativeTarget "Bitbucket User Finder" */;
 			buildPhases = (
+				87B32E053EB8CF928EFB2792 /* [CP] Check Pods Manifest.lock */,
 				762C411B2121687B00799500 /* Sources */,
 				762C411C2121687B00799500 /* Frameworks */,
 				762C411D2121687B00799500 /* Resources */,
+				E4B44A95DAEE51C3AA328870 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +212,64 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		87B32E053EB8CF928EFB2792 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bitbucket User Finder-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4B44A95DAEE51C3AA328870 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Bitbucket User Finder/Pods-Bitbucket User Finder-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/AlamofireImage/AlamofireImage.framework",
+				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AlamofireImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bitbucket User Finder/Pods-Bitbucket User Finder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		762C411B2121687B00799500 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				762C41252121687B00799500 /* ViewController.swift in Sources */,
+				76CE46D32122C06900C65F40 /* Html.swift in Sources */,
+				762C4144212170F200799500 /* UserService.swift in Sources */,
+				762C413821216D6E00799500 /* SearchVC.swift in Sources */,
+				762C41252121687B00799500 /* MainVC.swift in Sources */,
+				76CE46D12122C05E00C65F40 /* Avatar.swift in Sources */,
+				76CE46CF2122BFE500C65F40 /* Link.swift in Sources */,
+				762C413F21216FDE00799500 /* UserDisplay.swift in Sources */,
+				761C939921219F2B0046F1A5 /* User.swift in Sources */,
 				762C41232121687B00799500 /* AppDelegate.swift in Sources */,
+				761C9397212174470046F1A5 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -278,6 +411,7 @@
 		};
 		762C41322121687B00799500 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 17F70AA62C73D8E71E3087B5 /* Pods-Bitbucket User Finder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -296,6 +430,7 @@
 		};
 		762C41332121687B00799500 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 21104B39656E5337E90C20F1 /* Pods-Bitbucket User Finder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
