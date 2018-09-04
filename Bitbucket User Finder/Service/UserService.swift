@@ -52,4 +52,8 @@ class UserService {
             }
         }
     }
+    
+    func clearUserData() {
+        user = nil
+    }
 }

@@ -23,7 +23,7 @@ class SearchVC: UIViewController {
     // MARK: Initializers
     
     weak var searchUserDelegate: SearchUserDelegate?
-    var username: String = ""
+    fileprivate var username: String = ""
     
     // MARK: View LifeCycles
     

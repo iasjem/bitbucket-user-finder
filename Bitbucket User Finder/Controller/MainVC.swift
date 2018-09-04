@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  MainVC.swift
 //  Bitbucket User Finder
 //
 //  Created by Jemimah Beryl M. Sai on 13/08/2018.
@@ -22,13 +22,15 @@ class MainVC: UIViewController {
     
     // MARK: Initializers
     
-    var service = UserService.instance
-    private var currentUser: String = "karllhughes"
+    fileprivate var service = UserService.instance
+    fileprivate var currentUser: String = "karllhughes"
+    lazy var viewModel = { UserViewModel() }()
     
     // MARK: View LifeCycles
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        viewModel.retrieveData(from: currentUser)
         retrieveData(from: currentUser)
     }
     
@@ -43,25 +45,26 @@ class MainVC: UIViewController {
     
     func retrieveData(from user: String) {
         dataIsLoading()
-        service.retrieveData(username: user) { (success) in
-            
+        service.retrieveData(username: user) { [weak self] (success) in
+            guard let strongSelf = self else { return }
             if success {
-                self.dataWasLoaded(true)
-                self.displayUserAvatar()
-                self.setupUserDataView()
+                strongSelf.dataWasLoaded(true)
+                strongSelf.displayUserAvatar()
+                strongSelf.setupUserDataView()
             } else {
-                self.dataWasLoaded(false)
+                strongSelf.dataWasLoaded(false)
             }
         }
     }
     
     func displayUserAvatar() {
         guard let avatarURL = service.user?.avatarURL else {  return  }
-        service.retrieveAvatar(avatarURL: avatarURL) { (success, url) in
+        service.retrieveAvatar(avatarURL: avatarURL) { [weak self] (success, url) in
+            guard let strongSelf = self else { return }
             if success {
-                self.userAvatar.image = url
+                strongSelf.userAvatar.image = url
             } else {
-                self.userAvatar.image = UIImage()
+                strongSelf.userAvatar.image = UIImage()
             }
         }
     }
@@ -78,6 +81,7 @@ class MainVC: UIViewController {
     // MARK: Helpers
     
     func dataIsLoading() {
+        service.clearUserData()
         spinner.startAnimating()
         connectionStatusLabel.text = "Loading data"
         userDataView.isHidden = true
