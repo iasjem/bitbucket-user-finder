@@ -24,13 +24,11 @@ class MainVC: UIViewController {
     
     fileprivate var service = UserService.instance
     fileprivate var currentUser: String = "karllhughes"
-    lazy var viewModel = { UserViewModel() }()
     
     // MARK: View LifeCycles
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        viewModel.retrieveData(from: currentUser)
         retrieveData(from: currentUser)
     }
     
